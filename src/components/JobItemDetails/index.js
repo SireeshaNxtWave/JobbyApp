@@ -81,7 +81,7 @@ class JobItemDetails extends Component {
   }
 
   loadingView = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -96,11 +96,7 @@ class JobItemDetails extends Component {
       />
       <h1>Oops! Something Went Wrong</h1>
       <p>We cannot seem to find the page you are looking for</p>
-      <button
-        onClick={this.retryJobItemDetails()}
-        className="btn"
-        type="button"
-      >
+      <button onClick={this.retryJobItemDetails} className="btn" type="button">
         Retry
       </button>
     </div>

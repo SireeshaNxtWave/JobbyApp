@@ -148,7 +148,7 @@ class Jobs extends Component {
 
     return (
       <div className="profile-view">
-        <img alt={name} className="profile-image" src={profileImageUrl} />
+        <img alt="profile" className="profile-image" src={profileImageUrl} />
         <h1 className="profile-heading">{name}</h1>
         <p className="profile-para">{shortBio}</p>
       </div>
@@ -156,7 +156,7 @@ class Jobs extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -202,6 +202,7 @@ class Jobs extends Component {
   noJobsView = () => (
     <div className="no-jobs-container">
       <img
+        alt="no jobs"
         className="no-jobs"
         src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
       />
@@ -292,6 +293,7 @@ class Jobs extends Component {
                 onClick={this.searchInput}
                 type="button"
                 className="btn-search"
+                testid="searchButton"
               >
                 <BsSearch className="search-icon" />
               </button>
